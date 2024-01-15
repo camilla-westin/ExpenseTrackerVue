@@ -1,1 +1,7 @@
-<template><h1 class="font-bold text-red-500">My app</h1></template>
+<script setup>
+import Header from "@/components/Header.vue";
+</script>
+
+<template>
+  <Header />
+</template>
