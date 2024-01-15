@@ -1,8 +1,9 @@
 <template>
-  <h2>Add new transaction</h2>
+  <h2 class="mt-4 font-semibold text-sm">Add new transaction</h2>
+  <hr class="border-b border-nice-green border-solid border-1 my-2" />
   <form id="form">
     <fieldset>
-      <legend>Transaction Details</legend>
+      <legend class="uppercase text-xs font-medium">Transaction Details</legend>
       <div>
         <label for="text">Text</label>
         <input
@@ -22,6 +23,12 @@
         />
       </div>
     </fieldset>
-    <button type="submit" aria-label="Add transaction">Add transaction</button>
+    <button
+      type="submit"
+      aria-label="Add transaction"
+      class="w-full text-white bg-nice-purple p-2 mt-4 font-medium text-sm"
+    >
+      Add transaction
+    </button>
   </form>
 </template>
