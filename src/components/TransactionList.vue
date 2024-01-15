@@ -1,10 +1,15 @@
 <script setup>
+const emit = defineEmits(["transactionDeleted"]);
 const props = defineProps({
   transactions: {
     type: Array,
     required: true,
   },
 });
+
+const deleteTransaction = (id) => {
+  emit("transactionDeleted", id);
+};
 </script>
 
 <template>
@@ -20,6 +25,10 @@ const props = defineProps({
         :class="transaction.amount < 0 ? 'border-red-600' : 'border-green-600'"
       >
         {{ transaction.text }} <span>${{ transaction.amount }}</span>
+        <button
+          @click="deleteTransaction(transaction.id)"
+          class="bg-nice-purple h-3 w-3"
+        ></button>
       </li>
     </ul>
   </div>
