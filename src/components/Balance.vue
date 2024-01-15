@@ -9,7 +9,7 @@ const props = defineProps({
 
 <template>
   <div class="py-3">
-    <h2 class="uppercase text-xs font-medium">Your balance</h2>
-    <p class="text-xl font-semibold">{{ total }}$</p>
+    <h2 class="uppercase text-xs font-medium">Ditt saldo</h2>
+    <p class="text-xl font-semibold">{{ total }} SEK</p>
   </div>
 </template>

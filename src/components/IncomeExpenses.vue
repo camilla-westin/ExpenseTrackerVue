@@ -13,14 +13,14 @@ const props = defineProps({
 
 <template>
   <div class="bg-white p-4 flex justify-around items-center my-2">
-    <div>
-      <h3 class="uppercase text-xs font-medium">Income</h3>
-      <p id="money-plus" class="text-green-600">+${{ income }}</p>
+    <div class="items-center">
+      <h3 class="uppercase text-xs font-medium">Inkomst</h3>
+      <p id="money-plus" class="text-green-600">+{{ income }}</p>
     </div>
     <span class="h-10 bg-slate-100 border"></span>
-    <div>
-      <h3 class="uppercase text-xs font-medium">Expense</h3>
-      <p id="money-minus" class="text-red-600">-${{ expense }}</p>
+    <div class="items-center">
+      <h3 class="uppercase text-xs font-medium">Kostnad</h3>
+      <p id="money-minus" class="text-red-600">-{{ expense }}</p>
     </div>
   </div>
 </template>

@@ -14,7 +14,7 @@ const deleteTransaction = (id) => {
 
 <template>
   <div class="my-3">
-    <h2 class="font-semibold text-sm">History</h2>
+    <h2 class="font-semibold text-sm">Historik</h2>
     <hr class="border-b border-nice-green border-solid border-1 my-2" />
 
     <ul id="list">
@@ -24,11 +24,16 @@ const deleteTransaction = (id) => {
         :key="transaction.id"
         :class="transaction.amount < 0 ? 'border-red-600' : 'border-green-600'"
       >
-        {{ transaction.text }} <span>${{ transaction.amount }}</span>
-        <button
-          @click="deleteTransaction(transaction.id)"
-          class="bg-nice-purple h-3 w-3"
-        ></button>
+        {{ transaction.text }}
+        <div>
+          <span class="mr-2">${{ transaction.amount }}</span>
+          <button
+            @click="deleteTransaction(transaction.id)"
+            class="bg-nice-purple h-4 w-4"
+          >
+            <span class="text-white font-medium">X</span>
+          </button>
+        </div>
       </li>
     </ul>
   </div>
