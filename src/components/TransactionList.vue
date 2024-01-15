@@ -1,10 +1,14 @@
 <script setup>
-const transactions = [
-  { id: 1, text: "Flower", amount: -19.99 },
-  { id: 2, text: "Salary", amount: 219.95 },
-  { id: 2, text: "Food", amount: -20.95 },
-];
+import { defineProps } from "vue";
+
+const props = defineProps({
+  transactions: {
+    type: Array,
+    required: true,
+  },
+});
 </script>
+
 <template>
   <div class="my-3">
     <h2 class="font-semibold text-sm">History</h2>
