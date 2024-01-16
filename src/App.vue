@@ -75,8 +75,8 @@ const saveTransactionsToLocalStorage = () => {
 
 <template>
   <main class="flex justify-center items-center h-screen bg-nice-green">
-    <div class="w-2/5">
-      <h1 class="font-semibold text-m">Expense tracker</h1>
+    <div class="w-4/5 md:w-2/5">
+      <h1 class="font-semibold text-lg">Expense tracker</h1>
       <Balance :total="+total" />
       <IncomeExpenses :income="+income" :expense="+expense" />
       <TransactionsList

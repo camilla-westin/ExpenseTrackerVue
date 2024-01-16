@@ -32,30 +32,29 @@ const onSubmit = () => {
   <form id="form" @submit.prevent="onSubmit">
     <fieldset>
       <legend class="uppercase text-xs font-medium">Detaljer</legend>
-      <div class="my-2">
-        <label for="text" class="block text-sm">Text</label>
-        <input
-          type="text"
-          id="text"
-          placeholder="Text"
-          aria-labelledby="text"
-          v-model="text"
-        />
-      </div>
-      <div class="my-2">
-        <label for="amount" class="text-sm"
-          >Belopp <br />
-          <span class="text-xs block"
-            >(negativ - kostnad, positiv - inkomst)</span
-          ></label
-        >
-        <input
-          type="text"
-          id="amount"
-          placeholder="Belopp"
-          aria-labelledby="amount"
-          v-model="amount"
-        />
+      <div class="flex items-center">
+        <div class="my-2 w-2/3 gap-2">
+          <label for="text" class="text-sm block">Text</label>
+          <input
+            type="text"
+            id="text"
+            class="px-2 py-1 text-xs w-full"
+            placeholder="Text"
+            aria-labelledby="text"
+            v-model="text"
+          />
+        </div>
+        <div class="my-2 w-1/3">
+          <label for="amount" class="text-sm block">Belopp <br /> </label>
+          <input
+            type="text"
+            id="amount"
+            class="px-2 py-1 text-xs w-full"
+            placeholder="Belopp"
+            aria-labelledby="amount"
+            v-model="amount"
+          />
+        </div>
       </div>
     </fieldset>
     <button
